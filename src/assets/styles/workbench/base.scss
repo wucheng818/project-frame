@@ -1,0 +1,14 @@
+div.top-bar {
+  height: 66px;
+  line-height: 66px;
+  @include flex(row, nowrap);
+  align-items: center;
+  justify-content: space-between;
+}
+.list-icon {
+  @include wh(22px);
+}
+.list-add {
+  @include wh(27px);
+  cursor: pointer;
+}

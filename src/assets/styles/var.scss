@@ -1,0 +1,261 @@
+/*
+ * @Author: liuhuitao 
+ * @Date: 2019-08-20 15:03:49 
+ * @Last Modified by: liuhuitao
+ * @Last Modified time: 2019-12-19 16:08:42
+ * @description: element 样式配置文件(注：可在此修改默认样式)
+ */
+@import './mixin.scss';
+// 被按下时的颜色
+$touchColor: rgba(0, 0, 0, 0.025);
+$border-base-color: #e8e8e8;
+
+// $--color-primary: #077cff;
+// /* 改变 icon 字体路径变量，必需 */
+// $--font-path: '~element-ui/lib/theme-chalk/fonts';
+// @import '~element-ui/packages/theme-chalk/src/index';
+
+// ---- 修改表格默认样式 Start ----
+// 修改表格默认 hover 样式
+.el-table--enable-row-hover .el-table__body tr:hover > td {
+  background-color: #bee4fe !important;
+}
+.el-table {
+  color: #333333;
+  font-size: 16px;
+  .el-table__body-wrapper::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  //滚动条的滑块
+  .el-table__body-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  }
+  // 修改表头样式
+  th {
+    font-weight: bold;
+    @include sc(16px, #333333);
+    background-color: #e9e9e9;
+  }
+  // 表格hover
+  .el-table__body {
+    tr.hover-row > td,
+    tr.hover-row.el-table__row--striped > td {
+      transition: 0.3s background-color linear;
+      background-color: #bee4fe !important;
+    }
+  }
+}
+// 斑马条纹模式
+div.el-table--striped {
+  // 修改tbody样式
+  .el-table__body {
+    tr {
+      background-color: #ffffff;
+    }
+    tr.el-table__row--striped td {
+      background-color: #f8f8f8;
+    }
+    tr.current-row > td,
+    tr.el-table__row--striped.current-row td {
+      background-color: #bee4fe;
+    }
+  }
+}
+// 修改表格边框颜色
+.el-table--border,
+.el-table--border th,
+.el-table--border td {
+  border-color: #dddddd !important;
+}
+.el-table--border::after,
+.el-table__fixed-right::before,
+.el-table__fixed-right-patch {
+  background-color: #e9e9e9 !important;
+}
+// ---- 修改表格 End ----
+
+// 修改下拉框高度
+.el-scrollbar.el-cascader-menu {
+  height: 250px;
+}
+// 修改dragTreeTable表格样式
+.drag-tree-table {
+  div.drag-tree-table-header > div.tree-column {
+    color: rgb(51, 51, 51);
+    font-weight: 500;
+    // font-size: 18px;
+  }
+  div.drag-tree-table-body > div {
+    font-size: 17px;
+  }
+}
+// 修改 MessageBox 弹框样式
+.el-message-box {
+  // width: 400px;
+  height: 216px;
+  // title
+  .el-message-box__title {
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .el-message-box__headerbtn .el-message-box__close {
+    color: #666666;
+  }
+  // content
+  .el-message-box__content {
+    height: 70px;
+    padding: 42px 20px 0;
+    color: #333333;
+    font-size: 16px;
+  }
+  .el-message-box__status.el-icon-warning {
+    color: #5ba8e5;
+  }
+  // btn
+  .el-message-box__btns {
+    text-align: center;
+    padding: 0;
+    height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8;
+    .el-button {
+      width: 98px;
+      height: 42px;
+    }
+  }
+  .el-message-box__btns button:nth-child(2) {
+    margin-left: 41px;
+  }
+}
+
+// 修改工作台面包屑默认样式
+.breadcrumb-panel {
+  .el-breadcrumb {
+    @include sc(18px, #333333);
+  }
+}
+
+//表单样式
+.el-form {
+  .el-form-item {
+    .el-form-item__label {
+      color: #333333;
+    }
+  }
+}
+// 修改 collapse 折叠面板默认样式
+.el-collapse {
+  border-top-color: #0a7cd7;
+  .el-collapse-item__header {
+    background-color: #003f87;
+    border-bottom-color: #0a7cd7;
+    color: #ffffff;
+    padding: 0 10px 0 18px;
+    font-size: 16px;
+  }
+  .el-collapse-item__wrap {
+    background-color: transparent;
+    .el-collapse-item__content {
+      padding-bottom: 0;
+    }
+    border-bottom-color: #0a7cd7;
+  }
+}
+
+// 修改 面包屑 默认样式
+.el-breadcrumb {
+  font-size: 16px;
+}
+
+// 修改input输入框自定义搜索图标样式
+.el-input--suffix {
+  .input-search-icon-panel {
+    display: flex;
+    width: 38px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    .input-search-icon {
+      cursor: pointer;
+    }
+  }
+}
+// 修改要素管理 --> 团组管理表格样式
+// 修改账户管理表格样式
+.group-manage-tb .el-table__body .el-table__row {
+  td:nth-child(5),
+  td:nth-child(6),
+  td:nth-child(7) {
+    padding: 0 !important;
+    .cell {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+// 修改要素管理 --> 二级场馆表格样式
+.second-venue-tb .el-table__body .el-table__row {
+  td:nth-child(1),
+  td:nth-child(2),
+  td:nth-child(3) {
+    padding: 0 !important;
+    .cell {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+// 修改要素管理 --> 团组岗位表格样式
+.oper-post-tb .el-table__body .el-table__row {
+  td:nth-child(1),
+  td:nth-child(2),
+  td:nth-child(3),
+  td:nth-child(4) {
+    padding: 0 !important;
+    .cell {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+// 修改要素管理 --> 媒体工作人员表格样式
+.oper-media-person .el-table__body .el-table__row {
+  td:nth-child(1),
+  td:nth-child(2),
+  td:nth-child(3),
+  td:nth-child(4) {
+    padding: 0 !important;
+    .cell {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+//弹窗
+.el-dialog__header {
+  background-color: #0990ec;
+
+  .el-dialog__title {
+    color: #fff;
+  }
+
+  .el-dialog__headerbtn {
+    .el-dialog__close {
+      color: #fff;
+      font-size: 18px;
+    }
+  }
+}
+
+.el-dialog--center .el-dialog__body {
+  padding: 15px 20px !important;
+}
+
+.el-form-item {
+  margin-bottom: 18px !important;
+}

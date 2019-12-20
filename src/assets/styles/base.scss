@@ -1,0 +1,106 @@
+/*
+ * @Author: liuhuitao 
+ * @Date: 2019-08-08 14:08:38 
+ * @Last Modified by: niyining
+ * @Last Modified time: 2019-12-16 15:22:19
+ * @description: 组件公共样式、图标
+ */
+$imgUrl: '~@/assets/images/common';
+// ------------------- 组件内公共样式 START ------------------
+$topPanelH: 18px;
+// 两栏布局公共样式(参考组织管理)
+.main-container {
+  width: 100%;
+  height: 100%;
+  @include flex(row);
+
+  .left-panel {
+    width: 316px;
+    min-width: 316px;
+    margin-right: 6px;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 0 20px;
+    .l-title-bar {
+      height: 60px;
+      @include sc(18px, #333333);
+      @include flex(row);
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      font-size: $topPanelH;
+      border-bottom: 2px solid #dedede;
+    }
+
+    .tree-panel {
+      width: 100%;
+      height: calc(100% - 76px);
+      padding-top: 20px;
+      box-sizing: border-box;
+    }
+  }
+  .right-panel {
+    flex: 1;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: calc(100vw - 700px);
+    .r-title-bar {
+      flex: 1;
+      height: 60px;
+      border-bottom: 2px solid #dedede;
+      @include sc(18px, #333333);
+      @include flex(row);
+      justify-content: space-between;
+      align-items: center;
+      font-size: $topPanelH;
+    }
+    .content-panel {
+      width: 100%;
+      height: calc(100% - 66px);
+      box-sizing: border-box;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+}
+// 一栏布局公共样式(参考组织性质)
+.main-content-panel {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  .top-title-bar {
+    width: 100%;
+    height: 60px;
+    @include sc(18px, #333333);
+    @include flex(row);
+    justify-content: space-between;
+    align-items: center;
+    font-size: $topPanelH;
+    border-bottom: 2px solid #dedede;
+  }
+
+  .content-wrap {
+    width: 100%;
+    height: calc(100% - 62px);
+    overflow-y: auto;
+  }
+}
+// -------------------- 组件内公共样式 END ------------------
+// ----------------- 项目图标已class引入 START ----------------
+// 图标元素
+i.customize-icon {
+  background-size: 100% 100%;
+  display: inline-block;
+  @include wh(28px, 28px);
+  vertical-align: text-top;
+}
+.org-icon {
+  @include wh(24px, 23px);
+  // background: url('#{$imgUrl}/share.png') no-repeat;
+}
+// ------------------------ 项目图标已class引入 END --------------------------

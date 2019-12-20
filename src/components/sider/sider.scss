@@ -1,0 +1,179 @@
+$logoH: 80px;
+.sider {
+  box-shadow: 0px 0px 7px 0px rgba(69, 69, 69, 0.26);
+  &-logo {
+    height: $logoH;
+    background: #022445;
+    color: #fff;
+    line-height: $logoH;
+    text-align: center;
+    font-size: 18px;
+  }
+  .el-menu {
+    border-right: 0;
+  }
+  // 菜单图标
+  .menu-icon {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-right: 10px;
+  }
+
+  .el-menu-vertical-demo:not(.el-menu--collapse) {
+    width: 370px;
+    height: 100%;
+    overflow-y: auto;
+  }
+  // 深色系配置
+  .menu-dark {
+    .el-submenu__icon-arrow.el-icon-arrow-down {
+      font-size: 18px;
+    }
+    // 修改打开的根目录样式
+    .el-submenu {
+      border-bottom: 1px solid #374866;
+
+      .el-submenu__title {
+        color: #a9b8d3 !important;
+        background-color: #001c3f !important;
+      }
+      .el-menu-item {
+        background-color: #000727 !important;
+        color: #a9b8d3 !important;
+      }
+      // 修改子目录样式
+      .el-menu-item.is-active {
+        background-color: #1a70d0 !important;
+        color: #ffffff !important;
+      }
+      // 修改子目录hover样式
+      .el-menu-item:hover,
+      .el-submenu__title:hover {
+        background-color: #1a70d0bd !important;
+        color: #ffffff !important;
+      }
+      // hover修改svg填充色
+      .el-menu-item:hover .sub-menu,
+      .el-submenu__title:hover .root-menu {
+        fill: #ffffff;
+      }
+    }
+    // active
+    .is-active {
+      .el-submenu__title {
+        color: #ffffff !important;
+        background-color: #001c3f !important;
+        position: relative;
+        .root-menu {
+          fill: #ffffff;
+        }
+        &::before {
+          transition: 0.3s all linear;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 5px;
+          height: 100%;
+          background-color: #077cff;
+          content: '';
+          z-index: 10;
+        }
+      }
+    }
+  }
+  // 浅色系配置[此项目默认深色系]
+  .menu-light {
+    .el-submenu__icon-arrow.el-icon-arrow-down {
+      font-size: 18px;
+    }
+    // 修改打开的根目录样式
+    .el-submenu {
+      border-bottom: 1px solid #dedede;
+      .el-menu-item {
+        background-color: #eaeaea !important;
+      }
+      // 修改子目录样式
+      .el-menu-item.is-active {
+        background-color: #ffffff !important;
+        color: #0990ec !important;
+      }
+      // 修改子目录hover样式
+      .el-menu-item:hover,
+      .el-submenu__title:hover {
+        background-color: #ffffff !important;
+        color: #1890ff !important;
+      }
+      // svg填充色
+      .sub-menu,
+      .root-menu {
+        fill: #999999;
+      }
+      // hover修改svg填充色
+      .el-menu-item:hover .sub-menu,
+      .el-submenu__title:hover .root-menu {
+        fill: #1890ff;
+      }
+    }
+    // active
+    .is-active {
+      .el-submenu__title {
+        background-color: #ffffff !important;
+        color: #0990ec !important;
+        position: relative;
+        .root-menu {
+          fill: #1890ff;
+        }
+        &::before {
+          transition: 0.3s all linear;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 5px;
+          height: 100%;
+          background-color: #077cff;
+          content: '';
+          z-index: 10;
+        }
+      }
+    }
+    .el-menu-item.is-active {
+      .sub-menu {
+        fill: #1890ff;
+      }
+    }
+  }
+  .el-menu-item,
+  .el-submenu__title {
+    font-size: 18px !important;
+  }
+
+  .sider-logo span {
+    font-size: 28px;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+  }
+  .el-menu-item,
+  .el-submenu__title {
+    height: 60px;
+    line-height: 60px;
+  }
+
+  .collapse-icon {
+    position: absolute;
+    right: 20px;
+    bottom: 24px;
+    width: 24px;
+    .menu-fold {
+      cursor: pointer;
+      fill: #077cff !important;
+      transition: 0.3s transform linear;
+    }
+  }
+  .mti-svg-icon {
+    margin-right: 10px;
+  }
+}
