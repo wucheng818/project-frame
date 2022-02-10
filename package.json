@@ -89,7 +89,7 @@
     "mavon-editor": "^2.7.7",
     "mime": "^2.4.0",
     "mockjs": "^1.0.1-beta3",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "ora": "^3.4.0",
     "postcss-px-to-viewport": "^1.1.0",
     "postcss-sprites": "^4.2.1",
